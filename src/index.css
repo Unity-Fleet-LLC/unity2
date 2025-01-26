@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222 47% 11%;
+
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border antialiased;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-rental-light text-rental-text min-h-screen overflow-x-hidden;
+  }
+
+  @keyframes fade-in-bottom {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-bottom {
+    animation: fade-in-bottom 0.3s ease-out forwards;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 rounded-xl shadow-lg;
+  }
+
+  .glass-button {
+    @apply bg-rental-blue hover:bg-rental-blue/90 text-white border 
+    border-rental-blue/50 rounded-xl shadow-lg transition-all duration-300 
+    hover:shadow-rental-cyan/20 hover:scale-105 active:scale-95;
+  }
+
+  .nav-link {
+    @apply px-4 py-2 text-sm font-medium transition-colors hover:text-rental-blue relative
+    after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-rental-blue
+    after:transform after:scale-x-0 after:transition-transform hover:after:scale-x-100;
+  }
+
+  .hero-title {
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent 
+    bg-gradient-to-r from-rental-cyan via-rental-blue to-rental-orange;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-rental-cyan/20;
+  }
+
+  .container {
+    @apply px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl;
+  }
+
+  .responsive-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .mobile-text {
+    @apply text-base sm:text-lg leading-relaxed;
+  }
+}

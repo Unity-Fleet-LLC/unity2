@@ -1,0 +1,48 @@
+export const plans = [
+  {
+    name: "Base Plan",
+    description: "Perfect for occasional drivers",
+    price: 350,
+    vehicle: "Tesla Model 3",
+    features: [
+      "Model 3 (RWD - Standard Range)",
+      "1,000-2,000 miles/month included",
+      "Basic Autopilot",
+      "Standard interior",
+      "Pay-Per-Charge",
+      "Standard support (Business Hours)",
+      "Standard insurance (Higher deductible)",
+    ],
+  },
+  {
+    name: "Premium Plan",
+    description: "Ideal for regular commuters",
+    price: 750,
+    vehicle: "Tesla Model Y",
+    popular: true,
+    features: [
+      "Model Y (Long Range or Performance)",
+      "2,500-3,000 miles/month included",
+      "Enhanced Autopilot",
+      "Premium interior",
+      "Priority charging access",
+      "Priority support (Extended Hours)",
+      "Enhanced insurance (Lower deductible)",
+    ],
+  },
+  {
+    name: "Exclusive Plan",
+    description: "Ultimate flexibility and luxury",
+    price: 1500,
+    vehicle: "Tesla Model S",
+    features: [
+      "Model S (All variants)",
+      "3,500-4,500 miles/month included",
+      "Full Self-Driving capability",
+      "Premium interior & features",
+      "Unlimited charging",
+      "24/7 Dedicated support + Concierge",
+      "Comprehensive insurance (Lowest deductible)",
+    ],
+  },
+];
